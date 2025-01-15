@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MS Launcher</title>
+    <style>
+        /* Estilo general */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            overflow: hidden;
+            opacity: 0;
+            animation: fadeIn 2s forwards;
+        }
+
+        /* Animación de fundido */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        /* Video de fondo */
+        .video-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1; /* Asegura que el video esté detrás del contenido */
+            object-fit: cover;
+        }
+
+        /* Estilo de la franja negra en la parte superior */
+        .top-bar {
+            background-color: black;
+            height: 50px;
+        }
+
+        /* Estilo del contenido */
+        .content {
+            text-align: center;
+            margin-top: 100px;
+            color: white; /* Aseguramos que el texto sea visible sobre el video */
+        }
+
+        /* Estilo del texto */
+        .title {
+            font-size: 36px;
+        }
+
+        .subtitle {
+            font-size: 18px;
+            margin-top: 10px;
+        }
+
+        /* Estilo del botón */
+        .button {
+            margin-top: 20px;
+            padding: 15px 30px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <!-- Video de fondo -->
+    <video class="video-background" autoplay muted loop>
+        <source src="video/MSL-Background-Video.mp4" type="video/mp4">
+        Tu navegador no soporta la etiqueta de video.
+    </video>
+
+    <!-- Franja negra sin texto -->
+    <div class="top-bar"></div>
+
+    <!-- Contenido principal -->
+    <div class="content">
+        <div class="title">MS Launcher</div>
+        <div class="subtitle">Desarrollado por MattStudios</div>
+        <button class="button" onclick="window.location.href='https://download1325.mediafire.com/72xz25t2xqdgM0-Pth0ZpoBmF5ryndkpb5R6fH19fCRCeBSOXGyUzkHcZIfpiNUCx7m3D4KLVWq6tJhGhTFL9cN8ThHH4WUTtCBwf3Zm5tk9VJSmJ-maSkdFpCXQ6iAKaEaDVXkNV5pytnXWPmQggOblDMHCrOX7JPZTmQhb3ew/vx3zsdwadip8rsk/MSL+Installer.zip';">Descargar</button>
+    </div>
+</body>
+</html>
