@@ -9,11 +9,11 @@
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            overflow: hidden;
+            overflow-x: hidden;
             opacity: 0;
             animation: fadeIn 2s forwards;
-            background: url('webos.webp') no-repeat center center fixed;
-            background-size: cover; /* Ajusta la imagen para que cubra toda la pantalla */
+            background-color: black;
+            color: white;
         }
 
         /* Animación de fundido */
@@ -26,32 +26,74 @@
             }
         }
 
-        /* Estilo de la franja negra en la parte superior */
+        /* Estilo de la franja negra */
         .top-bar {
             background-color: black;
             height: 50px;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 100;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            box-sizing: border-box;
         }
 
-        /* Estilo del contenido */
-        .content {
+        .logo {
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .support-container {
+            display: flex;
+            align-items: center;
+            gap: 10px; /* Espacio entre los elementos */
+        }
+
+        .support-icon {
+            font-size: 18px;
+            color: white;
+        }
+
+        .support, .new-link {
+            color: white;
+            font-size: 16px;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .support:hover, .new-link:hover {
+            text-decoration: underline;
+        }
+
+        /* Primera sección con fondo de imagen */
+        .section1 {
+            background: url('webos.webp') no-repeat center center fixed;
+            background-size: cover;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
             text-align: center;
-            margin-top: 100px;
-            color: white; /* Aseguramos que el texto sea visible sobre el fondo */
         }
 
-        /* Estilo del texto */
         .title {
             font-size: 36px;
-            background: none; /* Elimina cualquier fondo */
+            margin: 0;
         }
 
         .subtitle {
             font-size: 18px;
             margin-top: 10px;
-            background: none; /* Elimina cualquier fondo */
         }
 
-        /* Estilo del botón */
         .button {
             margin-top: 20px;
             padding: 15px 30px;
@@ -67,17 +109,117 @@
         .button:hover {
             background-color: #45a049;
         }
+
+        /* Segunda sección */
+        .section2 {
+            background-color: black;
+            color: white;
+            padding: 100px 20px;
+            text-align: center;
+        }
+
+        .section2 h2 {
+            font-size: 32px;
+            margin-bottom: 40px;
+        }
+
+        .project {
+            margin-bottom: 40px;
+        }
+
+        .project-title {
+            font-size: 24px;
+            margin: 0 0 10px;
+        }
+
+        .project-description {
+            font-size: 16px;
+            margin: 0 0 20px;
+            line-height: 1.5;
+        }
+
+        .project-video, .project-image {
+            width: 80%;
+            max-width: 600px;
+            border: 2px solid white;
+            border-radius: 10px;
+        }
+
+        /* Estilo del pie de página */
+        .footer {
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 10px 20px;
+            font-size: 12px;
+            border-top: 1px solid white;
+        }
+
+        .footer a {
+            color: white;
+            text-decoration: underline;
+        }
+
+        .footer a:hover {
+            text-decoration: none;
+        }
     </style>
 </head>
 <body>
-    <!-- Franja negra sin texto -->
-    <div class="top-bar"></div>
+    <!-- Franja negra con "MSL", "New" y "Support" -->
+    <div class="top-bar">
+        <a href="#" class="logo">MSL</a>
+        <div class="support-container">
+            <a href="http://mattstudiosofi.github.io/new/" class="new-link" target="_blank">New</a>
+            <span class="support-icon">🎧</span>
+            <a href="https://discord.gg/GAq2XTnb" class="support" target="_blank">Support</a>
+        </div>
+    </div>
 
-    <!-- Contenido principal -->
-    <div class="content">
+    <!-- Primera sección -->
+    <div class="section1">
         <div class="title">MS Launcher</div>
         <div class="subtitle">Desarrollado por MattStudios</div>
         <button class="button" onclick="window.location.href='https://download1325.mediafire.com/72xz25t2xqdgM0-Pth0ZpoBmF5ryndkpb5R6fH19fCRCeBSOXGyUzkHcZIfpiNUCx7m3D4KLVWq6tJhGhTFL9cN8ThHH4WUTtCBwf3Zm5tk9VJSmJ-maSkdFpCXQ6iAKaEaDVXkNV5pytnXWPmQggOblDMHCrOX7JPZTmQhb3ew/vx3zsdwadip8rsk/MSL+Installer.zip';">Descargar</button>
+    </div>
+
+    <!-- Segunda sección -->
+    <div class="section2">
+        <h2>Nuestros futuros proyectos</h2>
+
+        <div class="project">
+            <h3 class="project-title">MattSafio 3</h3>
+            <p class="project-description">Un mundo donde cada día es más difícil sobrevivir. Esta miniserie está inspirada en <em>Dedsafio 3</em>, agregamos todo referente a él sin ningún error.</p>
+            <video class="project-video" controls>
+                <source src="mattSafio3.mp4" type="video/mp4">
+                Tu navegador no soporta la reproducción de video.
+            </video>
+        </div>
+
+        <div class="project">
+            <h3 class="project-title">Squid Craft Games 1</h3>
+            <p class="project-description">Tienes muchas deudas que pagar y lo quieres hacer lo más pronto posible. En estos juegos solo te debe importar tú y nadie más.</p>
+            <img class="project-image" src="squidCraftGames1.jpg" alt="Squid Craft Games 1">
+        </div>
+
+        <div class="project">
+            <h3 class="project-title">MC Extremo</h3>
+            <p class="project-description">En este mundo siempre será difícil sobrevivir. Tendrás que adentrarte a un mundo lleno de caos, muerte y destrucción.</p>
+            <img class="project-image" src="mcExtremo.jpg" alt="MC Extremo">
+        </div>
+
+        <div class="project">
+            <h3 class="project-title">FortCraft | The best battle royale</h3>
+            <p class="project-description">En este battle royale tendrás que sobrevivir ya sea en dúo, escuadra o tú SOLO. Recuerda estar atento a nuestro Discord y grupo de WhatsApp.</p>
+            <img class="project-image" src="fortCraft.jpg" alt="FortCraft">
+        </div>
+    </div>
+
+    <!-- Pie de página -->
+    <div class="footer">
+        Copyright © 2022 - 2025 MattStudios™, Todos los derechos reservados. 
+        <a href="#">Condiciones de Uso</a>, 
+        <a href="#">Política de privacidad</a>
     </div>
 </body>
 </html>
