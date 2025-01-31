@@ -71,10 +71,9 @@
             text-decoration: underline;
         }
 
-        /* Primera sección con fondo de imagen */
+        /* Primera sección con fondo de video */
         .section1 {
-            background: url('webos.webp') no-repeat center center fixed;
-            background-size: cover;
+            position: relative;
             height: 100vh;
             display: flex;
             flex-direction: column;
@@ -82,6 +81,16 @@
             align-items: center;
             color: white;
             text-align: center;
+        }
+
+        #background-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1; /* Mantiene el video en el fondo */
         }
 
         .title {
@@ -176,8 +185,12 @@
         </div>
     </div>
 
-    <!-- Primera sección -->
+    <!-- Primera sección con fondo de video -->
     <div class="section1">
+        <video autoplay muted loop id="background-video">
+            <source src="webos-background-video.mp4" type="video/mp4">
+            Tu navegador no soporta la reproducción de video.
+        </video>
         <div class="title">MS Launcher</div>
         <div class="subtitle">Desarrollado por MattStudios</div>
         <button class="button" onclick="window.location.href='https://download1325.mediafire.com/72xz25t2xqdgM0-Pth0ZpoBmF5ryndkpb5R6fH19fCRCeBSOXGyUzkHcZIfpiNUCx7m3D4KLVWq6tJhGhTFL9cN8ThHH4WUTtCBwf3Zm5tk9VJSmJ-maSkdFpCXQ6iAKaEaDVXkNV5pytnXWPmQggOblDMHCrOX7JPZTmQhb3ew/vx3zsdwadip8rsk/MSL+Installer.zip';">Descargar</button>
