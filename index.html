@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MS Launcher</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
     <style>
         /* Estilo general */
         body {
@@ -93,13 +94,22 @@
             z-index: -1; /* Mantiene el video en el fondo */
         }
 
+        .studio-logo {
+            width: 150px;
+            margin-bottom: 20px;
+        }
+
         .title {
-            font-size: 36px;
+            font-size: 48px;
             margin: 0;
+            padding: 10px 20px;
+            border: 4px solid white;
+            border-radius: 10px;
+            display: inline-block;
         }
 
         .subtitle {
-            font-size: 18px;
+            font-size: 20px;
             margin-top: 10px;
         }
 
@@ -191,7 +201,8 @@
             <source src="webos-background-video.mp4" type="video/mp4">
             Tu navegador no soporta la reproducción de video.
         </video>
-        <div class="title">MS Launcher</div>
+        <img src="mattstudios-logo.png" alt="MattStudios Logo" class="studio-logo">
+        <div class="title">MS Launcher - La mejor experiencia</div>
         <div class="subtitle">Desarrollado por MattStudios</div>
         <button class="button" onclick="window.location.href='https://download1325.mediafire.com/72xz25t2xqdgM0-Pth0ZpoBmF5ryndkpb5R6fH19fCRCeBSOXGyUzkHcZIfpiNUCx7m3D4KLVWq6tJhGhTFL9cN8ThHH4WUTtCBwf3Zm5tk9VJSmJ-maSkdFpCXQ6iAKaEaDVXkNV5pytnXWPmQggOblDMHCrOX7JPZTmQhb3ew/vx3zsdwadip8rsk/MSL+Installer.zip';">Descargar</button>
     </div>
@@ -199,33 +210,7 @@
     <!-- Segunda sección -->
     <div class="section2">
         <h2>Nuestros futuros proyectos</h2>
-
-        <div class="project">
-            <h3 class="project-title">MattSafio 3</h3>
-            <p class="project-description">Un mundo donde cada día es más difícil sobrevivir. Esta miniserie está inspirada en <em>Dedsafio 3</em>, agregamos todo referente a él sin ningún error.</p>
-            <video class="project-video" controls>
-                <source src="mattSafio3.mp4" type="video/mp4">
-                Tu navegador no soporta la reproducción de video.
-            </video>
-        </div>
-
-        <div class="project">
-            <h3 class="project-title">Squid Craft Games 1</h3>
-            <p class="project-description">Tienes muchas deudas que pagar y lo quieres hacer lo más pronto posible. En estos juegos solo te debe importar tú y nadie más.</p>
-            <img class="project-image" src="squidCraftGames1.jpg" alt="Squid Craft Games 1">
-        </div>
-
-        <div class="project">
-            <h3 class="project-title">MC Extremo</h3>
-            <p class="project-description">En este mundo siempre será difícil sobrevivir. Tendrás que adentrarte a un mundo lleno de caos, muerte y destrucción.</p>
-            <img class="project-image" src="mcExtremo.jpg" alt="MC Extremo">
-        </div>
-
-        <div class="project">
-            <h3 class="project-title">FortCraft | The best battle royale</h3>
-            <p class="project-description">En este battle royale tendrás que sobrevivir ya sea en dúo, escuadra o tú SOLO. Recuerda estar atento a nuestro Discord y grupo de WhatsApp.</p>
-            <img class="project-image" src="fortCraft.jpg" alt="FortCraft">
-        </div>
+        <!-- Contenido de proyectos -->
     </div>
 
     <!-- Pie de página -->
